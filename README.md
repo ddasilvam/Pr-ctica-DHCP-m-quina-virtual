@@ -42,6 +42,6 @@ Para ello, volvemos a editar el archivo `/etc/dhcp/dhcpd.conf` y, en la subred q
 
 ![Añadiendo un cliente con MAC fija](./img/7.png)
 
-Para comprobar que funciona, arrancamos el cliente que tiene la dirección MAC proporcionada en esta red, y haciendo en CMD un ipconfig /all podemos ver que se le ha asignado la IP que se requería.
+Para comprobar que funciona, arrancamos el cliente que tiene la dirección MAC proporcionada en esta red, y haciendo en CMD un `ipconfig /all` podemos ver que se le ha asignado la IP que se requería.
 
 ![Comprobando que el servicio DHCP proporciona la IP correcta](./img/8.png)
