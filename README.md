@@ -45,3 +45,13 @@ Para ello, volvemos a editar el archivo `/etc/dhcp/dhcpd.conf` y, en la subred q
 Para comprobar que funciona, arrancamos el cliente que tiene la dirección MAC proporcionada en esta red, y haciendo en CMD un `ipconfig /all` podemos ver que se le ha asignado la IP que se requería.
 
 ![Comprobando que el servicio DHCP proporciona la IP correcta](./img/8.png)
+
+## Comprobando con Wireshark los mensajes del protocolo
+
+Si utilizamos la herramienta Wireshark para inspeccionar los paquetes de la interfaz de red del cliente, podemos ver los 4 mensajes DHCP habituales para establecer una negociación con el servidor para obtener los parámetros de red. Se puede ver cómo el cliente no tiene IP asignada y envía un mensaje de broadcast con el DHCP Discover.
+
+![Negociación DHCP en Wireshark](./img/9.png)
+
+Si observamos los detalles del mensaje DHCP Offer enviado por el servidor, vemos cómo se le ofrece al cliente la IP 172.16.0.5, que es la que fue configurada en el servidor para esta MAC.
+
+![Detalles DHCP Offer](./img/10.png)
